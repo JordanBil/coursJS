@@ -7,3 +7,18 @@
     font-style: italic;
     background-color: violet;
 }
+
+.boxBar {
+    z-index: 1;
+    width: 100%;
+    border: 5px solid blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .bar {
+    height: 21px;
+    background: turquoise;
+    width: 0%;
+  }
