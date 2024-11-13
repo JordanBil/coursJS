@@ -59,4 +59,13 @@ VANTA.FOG({
     laBar.style.width = onEstOu*100 + "%" ; 
   })
 
+  monForm = document.querySelector("#msg");
+  ligne = document.querySelector(".magic");
+
+  monForm.addEventListener("keyup", function(){
+    
+    ligne.textContent = monForm.value;
+    
+  });
+
   
