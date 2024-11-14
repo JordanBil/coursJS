@@ -65,7 +65,17 @@ VANTA.FOG({
   monForm.addEventListener("keyup", function(){
     
     ligne.textContent = monForm.value;
+    localStorage.setItem("MonLocal",ligne.textContent);
     
   });
+
+  window.addEventListener("load", () => {
+    console.log("La page est complètement chargée");
+  
+    monLocal = localStorage.getItem("MonLocal");
+    monForm.value = monLocal;
+  });
+
+
 
   
