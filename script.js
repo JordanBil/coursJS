@@ -76,6 +76,40 @@ VANTA.FOG({
     monForm.value = monLocal;
   });
 
+  const apiDiv = document.querySelector('.apiContact');
+
+        const contactApi = async () => {
+
+            try {
+                
+                const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=20');
+                
+                
+                if (!response.ok) {
+                    throw new Error('Erreur de récupération des données');
+                }
+
+                const reponseJSON = await response.json();
+                              
+                const pokemonList = reponseJSON.results;
+               
+                pokemonList.forEach(pokemon => {
+                    const pokemonItem = document.createElement('div');
+                    pokemonItem.classList.add('pokemon-item');
+                    pokemonItem.innerText = pokemon.name; 
+                    apiDiv.appendChild(pokemonItem); 
+                });
+
+            } catch (error) {
+                console.error('Erreur:', error); 
+                apiDiv.innerText = 'Une erreur est survenue lors de la récupération des Pokémon.';
+            }
+        };
+        
+        contactApi();
+
+
+
 
 
   
