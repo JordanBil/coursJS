@@ -2,20 +2,9 @@ class Salarie {
 
     constructor(nom, prenom, age, salaire) {
         this.nom = nom;
+        this.prenom = prenom;
         this.age = age;
         this.salaire = salaire;
-    }
-    
-    getNom() {
-        return this.nom;
-    }
-
-    getPrenom() {
-        return this.prenom;
-    }
-
-    getAge() {
-        return this.age;
     }
 
     getSalaire() {
@@ -40,9 +29,6 @@ class Pme {
         this.fraisAchat = fraisAchat;
     }
     
-    getNom() {
-        return this.nom;
-    }
 
     getEquipe() {
         return this.equipe;
@@ -73,10 +59,17 @@ class Pme {
         return result;
     }
 
+    calculBilan() {
+        const coutEquipeTotal = this.coutEquipe();
+        let bilanResult = this.revenu - (this.fraisFixe + this.fraisAchat + coutEquipeTotal);
+        return bilanResult;
+    }
+
     bilanCalculed() {
         const coutEquipeTotal = this.coutEquipe();
         const coutInitial = this.coutInitial();
-        const bilan = this.revenu - (this.fraisFixe + this.fraisAchat + coutEquipeTotal);
+        const bilan = this.calculBilan();
+        
 
         console.log(
             "-------------------MA PME ----------------\n" +
