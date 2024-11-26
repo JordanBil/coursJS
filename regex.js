@@ -22,7 +22,6 @@ mail.addEventListener("keyup", function() {
     }
 });
 
-
 const charDecimal = /\d/;
 const charSpecial = /[$&@!]/;
 
