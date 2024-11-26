@@ -57,9 +57,10 @@ try {
     bibliotheque.ajouterLivre(livre2);
     bibliotheque.ajouterLivre(livre3);
 
-    bibliotheque.emprunterLivre("1984"); 
+    bibliotheque.emprunterLivre("1984");
+    bibliotheque.emprunterLivre("1984");
     bibliotheque.retournerLivre("1984"); 
-    
+    bibliotheque.emprunterLivre("bratislaBios");
     bibliotheque.emprunterLivre("Le Hobbit"); 
 } catch (error) {
     console.error(error.message);

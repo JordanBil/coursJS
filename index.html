@@ -4,40 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <script defer src="regex.js"></script>
+    <script defer src="main.js" type="module"></script>
     <link href="style.css" rel="stylesheet">
     
 </head>
 <body>
-
-    <form class="login-form" action="#" method="post">
-        <h2>Connexion</h2>
-        <div class="form-group">
-            <label for="email">Adresse Email</label>
-            <input type="email" id="email" name="email" placeholder="Entrez votre email" required>
-        </div>
-
-        <div class="resultat">
-            <p id="message">Entrez votre Email...</p>
-        </div>
-
-        <div class="form-group">
-            <label for="password">Mot de Passe</label>
-            <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
-        </div>
-        <button type="submit" class="btn-submit">Se connecter</button>  <br><br>
-
-        <ul class="testMdp" id="listeTestMdp">
-            <li id="lengthMin">Au moins 5 caractères</li>
-            <li id="lengthMax" style="display: none">Pas plus de 10 caractères</li>
-            <li id="maj">Au moins une majuscule</li>
-            <li id="number">Au moins un chiffre</li>
-            <li id="special">Au moins un caractère spécial (@, $, !, &)</li>
-        </ul>
-        
-    </form>
- 
+    <h1 id="monTitre" type="module">Bienvenue sur la page d'accueil</h1>
 </body>
 </html>
