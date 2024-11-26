@@ -5,10 +5,11 @@ class Salarie {
         this.prenom = prenom;
         this.age = age;
         this.salaire = salaire;
+        this.salaireCalc = this.calculSalaireAnnuel();
     }
 
-    getSalaire() {
-        return this.salaire;
+    getSalaireCalc() {
+        return this.salaireCalc;
     }
 
     calculSalaireAnnuel() {
@@ -29,7 +30,6 @@ class Pme {
         this.fraisAchat = fraisAchat;
     }
     
-
     getEquipe() {
         return this.equipe;
     }
@@ -49,7 +49,7 @@ class Pme {
     coutEquipe() {
         let total = 0;
         this.equipe.forEach(person => {
-            total += person.calculSalaireAnnuel();
+            total += person.getSalaireCalc();
         });
         return total;
     }
@@ -70,7 +70,6 @@ class Pme {
         const coutInitial = this.coutInitial();
         const bilan = this.calculBilan();
         
-
         console.log(
             "-------------------MA PME ----------------\n" +
         "Ma Petite Entreprise - : Cout initial : " + coutInitial + "\n" +
@@ -94,5 +93,3 @@ const pme = new Pme(
     20000,
     50000);
 pme.bilanCalculed();
-
-
